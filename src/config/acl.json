@@ -1,0 +1,97 @@
+[
+  {
+    "group": "admin",
+    "permissions": [
+      {
+        "resource": "*",
+        "methods": "*",
+        "action": "allow"
+      }
+    ]
+  },
+  {
+    "group": "user",
+    "permissions": [
+      {
+        "resource": "users",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "linkCategories",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "users/:id",
+        "methods": ["GET", "PUT"],
+        "action": "allow"
+      },
+      {
+        "resource": "users/birthday",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "usefulLinks",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "announcements/userAnnouncements",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "/quote",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "/ceo",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "events",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "events/:id",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "/blogs",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "/blogs/:id",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "/bannerImage",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "/locations",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "/departments",
+        "methods": ["GET"],
+        "action": "allow"
+      },
+      {
+        "resource": "users/workAnniversary",
+        "methods": ["GET"],
+        "action": "allow"
+      }
+    ]
+  }
+]
