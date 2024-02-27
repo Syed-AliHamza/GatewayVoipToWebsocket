@@ -1,10 +1,10 @@
 import debugObj from 'debug';
 import http from 'http';
-// import WebSocket from 'ws';
+import WebSocket from 'ws';
 import app from './app';
-// import { handleWsConnection } from './registrarTest';
+import { handleWsConnection } from './proxy';
 // eslint-disable-next-line no-unused-vars
-// import { userAgent } from './sipForked';
+import { userAgent } from './sipForked';
 
 const debug = debugObj('api:server');
 const port = normalizePort(process.env.PORT || '5000');
@@ -35,11 +35,11 @@ function normalizePort(val) {
   return false;
 }
 
-// const wss = new WebSocket.Server({
-//   server,
-// });
+const wss = new WebSocket.Server({
+  server,
+});
 
-// wss.on('connection', handleWsConnection);
+wss.on('connection', handleWsConnection);
 
 function onError(error) {
   if (error.syscall !== 'listen') {
